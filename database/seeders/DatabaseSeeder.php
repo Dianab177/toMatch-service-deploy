@@ -474,13 +474,18 @@ class DatabaseSeeder extends Seeder
     {
         // Insertar datos en la tabla stacks
         $stacks = [
-            ['name' => 'PHP'], // id: 1
-            ['name' => 'JAVA'], // id: 2
-            ['name' => 'JAVASCRIPT'], // id: 3
-            ['name' => 'REACT'] // id: 4
+            ['name' => 'PHP', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'Laravel', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'React', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'JavasCript', 'created_at' => now(), 'updated_at' => now()],
+            // Añade más stacks según sea necesario
         ];
+
         foreach ($stacks as $stack) {
-            Stack::create($stack);
+            DB::table('stacks')->updateOrInsert(
+                ['name' => $stack['name']],
+                ['created_at' => $stack['created_at'], 'updated_at' => $stack['updated_at']]
+            );
         }
 
         // Insertar datos en la tabla languages
