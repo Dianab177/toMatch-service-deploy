@@ -19,6 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     
 
 });
+
 Route::options('{any}', function () {
     return response()->json([], 200);
 })->where('any', '.*');
