@@ -19,6 +19,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     
 
 });
+Route::options('{any}', function () {
+    return response()->json([], 200);
+})->where('any', '.*');
+
 Route::get('/events','App\Http\Controllers\EventController@index');
 Route::post('/events','App\Http\Controllers\EventController@store');
 Route::get('/events/{event}','App\Http\Controllers\EventController@show');
