@@ -472,12 +472,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Insertar datos en la tabla stacks
-        $stacks = [
+          // Insertar datos en la tabla stacks
+          $stacks = [
             ['name' => 'PHP', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Laravel', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'React', 'created_at' => now(), 'updated_at' => now()],
-            ['name' => 'JavasCript', 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'JavaScript', 'created_at' => now(), 'updated_at' => now()],
             // Añade más stacks según sea necesario
         ];
 
