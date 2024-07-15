@@ -6,7 +6,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'], 
+    'allowed_origins' => ['https://tomatch-app-deploy.netlify.app/match'], // Cambia esto por tu dominio de Netlify
 
     'allowed_origins_patterns' => [],
 
