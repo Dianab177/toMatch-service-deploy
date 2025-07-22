@@ -1,11 +1,11 @@
-app = "toMatch-service-deploy"
+app = "tomatch-service-deploy"
 
 [build]
-dockerfile = "Dockerfile"
+  dockerfile = "Dockerfile"
 
 [deploy]
-release_command = "php artisan migrate --force"
+  release_command = "php artisan migrate --force"
 
 [http_service]
-internal_port = 8080
-processes = ["app"]
+  internal_port = 8080
+  processes = ["app"]
