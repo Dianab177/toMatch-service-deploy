@@ -1,11 +1,8 @@
-app = "tomatch-service-deploy"
-
+app = "tomatch-service-deploy"  # tu nombre real de app
 [build]
   dockerfile = "Dockerfile"
-
 [deploy]
   release_command = "php artisan migrate --force"
-
 [http_service]
   internal_port = 8080
   processes = ["app"]
